@@ -1,5 +1,15 @@
 *{
     margin: 0;
+    padding: 0;
+}
+
+h2{
+    display: inline;
+}
+
+hr
+{
+   color:  rgb(234,237,239);
 }
 html,body{
     width: 100%;
@@ -14,6 +24,7 @@ header,nav,main{
 }
 
 header{
+    flex:0 0 auto;
     height: 100%;
     background-color: rgb(29,37,49);
     /* 因为图标都是fixed定位，header里面就没内容了，就没宽度了，只能指定一下宽度为图片的宽度，让图片视觉上是在header里面 */
@@ -21,15 +32,35 @@ header{
 }
 
 nav{
+    flex:0 0 auto;
     width: 250px;
     height: 100%;
     background-color: rgb(34,44,60);
     padding: 30px;
     box-sizing: border-box;
+    color: rgb(183,192,205);
+    font-size: 0.7em;
 }
 
 main{
-   flex: 2 auto;
+   flex: 1 auto;
+}
+
+main section:nth-child(2)
+{
+    width: 100%;
+    display: flex;
+}
+
+main section:nth-child(2) article:nth-child(1){
+    flex: 0 0 auto;
+    width: 400px;
+    border: 1px solid rgb(234,237,239);
+}
+
+main section:nth-child(2) article:nth-child(2){
+    flex: 1 1 auto;
+    border: 1px solid rgb(234,237,239);
 }
 
 header img{
@@ -55,7 +86,6 @@ nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    color: rgb(183,192,205);
     line-height: 3em;
     font-weight: bold;
 }
@@ -66,5 +96,101 @@ nav ul li:nth-child(1){
 
 nav img{
     float: right;
-    margin-top:15px ;
+    margin-top:8px ;
+}
+
+.floatRight{
+    float: right;
+    margin-left: 10px;
+}
+
+.floatLeft{
+    float: left;
+    margin-right: 10px;
+}
+
+nav .active,nav p{
+    color:white;
+    font-weight: bold;
+}
+
+.monthlyGoal{
+    position: fixed;
+    bottom: 0;
+}
+
+.dropdown{
+    margin: 10px 50px;
+    height: 7px;
+}
+
+.textForBlue{
+    color:rgb(81,174,244);
+    font-weight: bolder;
+}
+
+main div{
+    margin: 20px;
+}
+
+main section:nth-child(1){
+    overflow: auto;
+    border-bottom: 1px solid rgb(234,237,239) ;
+}
+
+main section:nth-child(1) h1{
+    display: inline-block;
+    font-weight: normal;
+    margin: 20px ;
+}
+
+main section:nth-child(1) div{
+    display: flex;
+}
+
+.sreach{
+    text-align: center;
+    padding: 20px;
+}
+
+.Person-Card *{
+    display: inline-block;
+}
+
+.person{
+    width: 90%;
+}
+
+main section:nth-child(2){
+    color:rgb(131,135,143);
+}
+
+article:nth-child(2) div:nth-child(1){
+    position: relative;
+}
+
+.btngroup{
+   display: inline-block;
+   margin-left:30% ;
+}
+
+.btngroup button{
+    width: 30px;
+    height: 30px;
+}
+
+.Messages{
+    display: flex;
+    line-height: 1.5em;
+}
+
+.Messages img:nth-child(1){
+    width: 46px;
+    height: 46px;
+    margin: 10px;
+}
+
+.Reply{
+    width: 80%;
+    height: 60px;
 }
